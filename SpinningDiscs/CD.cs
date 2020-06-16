@@ -1,11 +1,20 @@
 ﻿using System;
 namespace SpinningDiscs
 {
-    public class CD
+    public class CD : MediaStorage, IOpticalDisc
     {
-        // TODO: Implement your custom interface.
+        public CD(string name, int storageCapacity, int capacityUsed, string diskType) : base(name, storageCapacity, capacityUsed, diskType)
+        {
+        }
 
-        // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
-        //  need to be declared separately. 
+        public void ReadData()
+        {
+            Console.WriteLine("Would you like to play a game ?");
+        }
+
+        public void SpinDisc()
+        {
+            Console.WriteLine("A CD spins at a rate of 200 - 500 rpm.");
+        }
     }
 }
